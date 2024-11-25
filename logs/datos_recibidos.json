@@ -1,0 +1,1219 @@
+{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "11",
+        "neumaticos": "12",
+        "modelo_motor": "13",
+        "transmision": "14",
+        "revoluciones_motor": "15",
+        "combustible": "16",
+        "potencia_neta": "17",
+        "peso_bruto_trabajo": "18",
+        "torque_neto": "19",
+        "voltaje": "20",
+        "sistema_alimentacion": "21",
+        "cilindros": "22"
+    },
+    "popupC": {
+        "codigo": "23",
+        "denominacion": "24",
+        "cantidad": "25"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "11",
+        "neumaticos": "12",
+        "modelo_motor": "13",
+        "transmision": "14",
+        "revoluciones_motor": "15",
+        "combustible": "16",
+        "potencia_neta": "17",
+        "peso_bruto_trabajo": "18",
+        "torque_neto": "19",
+        "voltaje": "20",
+        "sistema_alimentacion": "21",
+        "cilindros": "22"
+    },
+    "popupC": {
+        "codigo": "23",
+        "denominacion": "24",
+        "cantidad": "25"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "11",
+        "neumaticos": "12",
+        "modelo_motor": "13",
+        "transmision": "14",
+        "revoluciones_motor": "15",
+        "combustible": "16",
+        "potencia_neta": "17",
+        "peso_bruto_trabajo": "18",
+        "torque_neto": "19",
+        "voltaje": "20",
+        "sistema_alimentacion": "21",
+        "cilindros": "22"
+    },
+    "popupC": {
+        "codigo": "23",
+        "denominacion": "24",
+        "cantidad": "25"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "11",
+        "neumaticos": "12",
+        "modelo_motor": "13",
+        "transmision": "14",
+        "revoluciones_motor": "15",
+        "combustible": "16",
+        "potencia_neta": "17",
+        "peso_bruto_trabajo": "18",
+        "torque_neto": "19",
+        "voltaje": "20",
+        "sistema_alimentacion": "21",
+        "cilindros": "22"
+    },
+    "popupC": {
+        "codigo": "23",
+        "denominacion": "24",
+        "cantidad": "25"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "11",
+        "neumaticos": "12",
+        "modelo_motor": "13",
+        "transmision": "14",
+        "revoluciones_motor": "15",
+        "combustible": "16",
+        "potencia_neta": "17",
+        "peso_bruto_trabajo": "18",
+        "torque_neto": "19",
+        "voltaje": "20",
+        "sistema_alimentacion": "21",
+        "cilindros": "22"
+    },
+    "popupC": {
+        "codigo": "23",
+        "denominacion": "24",
+        "cantidad": "25"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "11",
+        "neumaticos": "12",
+        "modelo_motor": "13",
+        "transmision": "14",
+        "revoluciones_motor": "15",
+        "combustible": "16",
+        "potencia_neta": "17",
+        "peso_bruto_trabajo": "18",
+        "torque_neto": "19",
+        "voltaje": "20",
+        "sistema_alimentacion": "21",
+        "cilindros": "22"
+    },
+    "popupC": {
+        "codigo": "23",
+        "denominacion": "24",
+        "cantidad": "25"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "11",
+        "neumaticos": "12",
+        "modelo_motor": "13",
+        "transmision": "14",
+        "revoluciones_motor": "15",
+        "combustible": "16",
+        "potencia_neta": "17",
+        "peso_bruto_trabajo": "18",
+        "torque_neto": "19",
+        "voltaje": "20",
+        "sistema_alimentacion": "21",
+        "cilindros": "22"
+    },
+    "popupC": {
+        "codigo": "23",
+        "denominacion": "24",
+        "cantidad": "25"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "11",
+        "neumaticos": "12",
+        "modelo_motor": "13",
+        "transmision": "14",
+        "revoluciones_motor": "15",
+        "combustible": "16",
+        "potencia_neta": "17",
+        "peso_bruto_trabajo": "18",
+        "torque_neto": "19",
+        "voltaje": "20",
+        "sistema_alimentacion": "21",
+        "cilindros": "22"
+    },
+    "popupC": {
+        "codigo": "23",
+        "denominacion": "24",
+        "cantidad": "25"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "10",
+        "neumaticos": "11",
+        "modelo_motor": "12",
+        "transmision": "13",
+        "revoluciones_motor": "14",
+        "combustible": "15",
+        "potencia_neta": "16",
+        "peso_bruto_trabajo": "17",
+        "torque_neto": "18",
+        "voltaje": "19",
+        "sistema_alimentacion": "20",
+        "cilindros": "21"
+    },
+    "popupC": {
+        "codigo": "22",
+        "denominacion": "23",
+        "cantidad": "24"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "10",
+        "neumaticos": "11",
+        "modelo_motor": "12",
+        "transmision": "13",
+        "revoluciones_motor": "14",
+        "combustible": "15",
+        "potencia_neta": "16",
+        "peso_bruto_trabajo": "17",
+        "torque_neto": "18",
+        "voltaje": "19",
+        "sistema_alimentacion": "20",
+        "cilindros": "21"
+    },
+    "popupC": {
+        "codigo": "22",
+        "denominacion": "23",
+        "cantidad": "24"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "10",
+        "neumaticos": "11",
+        "modelo_motor": "12",
+        "transmision": "13",
+        "revoluciones_motor": "14",
+        "combustible": "15",
+        "potencia_neta": "16",
+        "peso_bruto_trabajo": "17",
+        "torque_neto": "18",
+        "voltaje": "19",
+        "sistema_alimentacion": "20",
+        "cilindros": "21"
+    },
+    "popupC": {
+        "codigo": "22",
+        "denominacion": "23",
+        "cantidad": "24"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "10",
+        "neumaticos": "11",
+        "modelo_motor": "12",
+        "transmision": "13",
+        "revoluciones_motor": "14",
+        "combustible": "15",
+        "potencia_neta": "16",
+        "peso_bruto_trabajo": "17",
+        "torque_neto": "18",
+        "voltaje": "19",
+        "sistema_alimentacion": "20",
+        "cilindros": "21"
+    },
+    "popupC": {
+        "codigo": "22",
+        "denominacion": "23",
+        "cantidad": "24"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "10",
+        "neumaticos": "11",
+        "modelo_motor": "12",
+        "transmision": "13",
+        "revoluciones_motor": "14",
+        "combustible": "15",
+        "potencia_neta": "16",
+        "peso_bruto_trabajo": "17",
+        "torque_neto": "18",
+        "voltaje": "19",
+        "sistema_alimentacion": "20",
+        "cilindros": "21"
+    },
+    "popupC": {
+        "codigo": "22",
+        "denominacion": "23",
+        "cantidad": "24"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "10",
+        "neumaticos": "11",
+        "modelo_motor": "12",
+        "transmision": "13",
+        "revoluciones_motor": "14",
+        "combustible": "15",
+        "potencia_neta": "16",
+        "peso_bruto_trabajo": "17",
+        "torque_neto": "18",
+        "voltaje": "19",
+        "sistema_alimentacion": "20",
+        "cilindros": "21"
+    },
+    "popupC": {
+        "codigo": "22",
+        "denominacion": "23",
+        "cantidad": "24"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "1",
+        "modelo": "2",
+        "fabricante": "3",
+        "serial_carroceria": "4",
+        "marca": "5",
+        "ubicacion": "6",
+        "serie": "7",
+        "serial_motor": "8",
+        "color": "9"
+    },
+    "popupB": {
+        "peso_operaciones": "10",
+        "neumaticos": "11",
+        "modelo_motor": "12",
+        "transmision": "13",
+        "revoluciones_motor": "14",
+        "combustible": "15",
+        "potencia_neta": "16",
+        "peso_bruto_trabajo": "17",
+        "torque_neto": "18",
+        "voltaje": "19",
+        "sistema_alimentacion": "20",
+        "cilindros": "21"
+    },
+    "popupC": {
+        "codigo": "22",
+        "denominacion": "23",
+        "cantidad": "24"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "ADF",
+        "modelo": "300F",
+        "fabricante": "Micro",
+        "serial_carroceria": "VRF1112",
+        "marca": "Huyndai",
+        "ubicacion": "Cart",
+        "serie": "RM1",
+        "serial_motor": "3FHN",
+        "color": "Rojo"
+    },
+    "popupB": {
+        "peso_operaciones": "5ww",
+        "neumaticos": "Michelin",
+        "modelo_motor": "4f",
+        "transmision": "3fT",
+        "revoluciones_motor": "1599",
+        "combustible": "Gas",
+        "potencia_neta": "1900BTU",
+        "peso_bruto_trabajo": "1600 BTU",
+        "torque_neto": "5000",
+        "voltaje": "240",
+        "sistema_alimentacion": "Electric",
+        "cilindros": "6F"
+    },
+    "popupC": {
+        "codigo": "5551267AF",
+        "denominacion": "RJSNN4",
+        "cantidad": "29"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "ADF",
+        "modelo": "300F",
+        "fabricante": "Micro",
+        "serial_carroceria": "VRF1112",
+        "marca": "Huyndai",
+        "ubicacion": "Cart",
+        "serie": "RM1",
+        "serial_motor": "3FHN",
+        "color": "Rojo"
+    },
+    "popupB": {
+        "peso_operaciones": "5ww",
+        "neumaticos": "Michelin",
+        "modelo_motor": "4f",
+        "transmision": "3fT",
+        "revoluciones_motor": "1599",
+        "combustible": "Gas",
+        "potencia_neta": "1900BTU",
+        "peso_bruto_trabajo": "1600 BTU",
+        "torque_neto": "5000",
+        "voltaje": "240",
+        "sistema_alimentacion": "Electric",
+        "cilindros": "6F"
+    },
+    "popupC": {
+        "codigo": "5551267AF",
+        "denominacion": "RJSNN4",
+        "cantidad": "29"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "ADF",
+        "modelo": "300F",
+        "fabricante": "Micro",
+        "serial_carroceria": "VRF1112",
+        "marca": "Huyndai",
+        "ubicacion": "Cart",
+        "serie": "RM1",
+        "serial_motor": "3FHN",
+        "color": "Rojo"
+    },
+    "popupB": {
+        "peso_operaciones": "5ww",
+        "neumaticos": "Michelin",
+        "modelo_motor": "4f",
+        "transmision": "3fT",
+        "revoluciones_motor": "1599",
+        "combustible": "Gas",
+        "potencia_neta": "1900BTU",
+        "peso_bruto_trabajo": "1600 BTU",
+        "torque_neto": "5000",
+        "voltaje": "240",
+        "sistema_alimentacion": "Electric",
+        "cilindros": "6F"
+    },
+    "popupC": {
+        "codigo": "5551267AF",
+        "denominacion": "RJSNN4",
+        "cantidad": "29"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "ADF",
+        "modelo": "300F",
+        "fabricante": "Micro",
+        "serial_carroceria": "VRF1112",
+        "marca": "Huyndai",
+        "ubicacion": "Cart",
+        "serie": "RM1",
+        "serial_motor": "3FHN",
+        "color": "Rojo"
+    },
+    "popupB": {
+        "peso_operaciones": "5ww",
+        "neumaticos": "Michelin",
+        "modelo_motor": "4f",
+        "transmision": "3fT",
+        "revoluciones_motor": "1599",
+        "combustible": "Gas",
+        "potencia_neta": "1900BTU",
+        "peso_bruto_trabajo": "1600 BTU",
+        "torque_neto": "5000",
+        "voltaje": "240",
+        "sistema_alimentacion": "Electric",
+        "cilindros": "6F"
+    },
+    "popupC": {
+        "codigo": "5551267AF",
+        "denominacion": "RJSNN4",
+        "cantidad": "29"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "ADF",
+        "modelo": "300F",
+        "fabricante": "Micro",
+        "serial_carroceria": "VRF1112",
+        "marca": "Huyndai",
+        "ubicacion": "Cart",
+        "serie": "RM1",
+        "serial_motor": "3FHN",
+        "color": "Rojo"
+    },
+    "popupB": {
+        "peso_operaciones": "5ww",
+        "neumaticos": "Michelin",
+        "modelo_motor": "4f",
+        "transmision": "3fT",
+        "revoluciones_motor": "1599",
+        "combustible": "Gas",
+        "potencia_neta": "1900BTU",
+        "peso_bruto_trabajo": "1600 BTU",
+        "torque_neto": "5000",
+        "voltaje": "240",
+        "sistema_alimentacion": "Electric",
+        "cilindros": "6F"
+    },
+    "popupC": {
+        "codigo": "5551267AF",
+        "denominacion": "RJSNN4",
+        "cantidad": "29"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "Mazda",
+        "modelo": "R5",
+        "fabricante": "Mazda",
+        "serial_carroceria": "1XF1",
+        "marca": "Mazda",
+        "ubicacion": "Cartanal",
+        "serie": "XX1",
+        "serial_motor": "1F2F3F",
+        "color": "Beige"
+    },
+    "popupB": {
+        "peso_operaciones": "1500",
+        "neumaticos": "4L",
+        "modelo_motor": "1Xengine",
+        "transmision": "Trasmision",
+        "revoluciones_motor": "123",
+        "combustible": "gas",
+        "potencia_neta": "15000",
+        "peso_bruto_trabajo": "3000",
+        "torque_neto": "15000",
+        "voltaje": "360",
+        "sistema_alimentacion": "electric",
+        "cilindros": "4"
+    },
+    "popupC": {
+        "codigo": "X8X9",
+        "denominacion": "FFGGHH",
+        "cantidad": "6"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "Mazda",
+        "modelo": "R5",
+        "fabricante": "Mazda",
+        "serial_carroceria": "1XF1",
+        "marca": "Mazda",
+        "ubicacion": "Cartanal",
+        "serie": "XX1",
+        "serial_motor": "1F2F3F",
+        "color": "Beige"
+    },
+    "popupB": {
+        "peso_operaciones": "1500",
+        "neumaticos": "4L",
+        "modelo_motor": "1Xengine",
+        "transmision": "Trasmision",
+        "revoluciones_motor": "123",
+        "combustible": "gas",
+        "potencia_neta": "15000",
+        "peso_bruto_trabajo": "3000",
+        "torque_neto": "15000",
+        "voltaje": "360",
+        "sistema_alimentacion": "electric",
+        "cilindros": "4"
+    },
+    "popupC": {
+        "codigo": "X8X9",
+        "denominacion": "FFGGHH",
+        "cantidad": "6"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "Mazda",
+        "modelo": "R5",
+        "fabricante": "Mazda",
+        "serial_carroceria": "1XF1",
+        "marca": "Mazda",
+        "ubicacion": "Cartanal",
+        "serie": "XX1",
+        "serial_motor": "1F2F3F",
+        "color": "Beige"
+    },
+    "popupB": {
+        "peso_operaciones": "1500",
+        "neumaticos": "4L",
+        "modelo_motor": "1Xengine",
+        "transmision": "Trasmision",
+        "revoluciones_motor": "123",
+        "combustible": "gas",
+        "potencia_neta": "15000",
+        "peso_bruto_trabajo": "3000",
+        "torque_neto": "15000",
+        "voltaje": "360",
+        "sistema_alimentacion": "electric",
+        "cilindros": "4"
+    },
+    "popupC": {
+        "codigo": "X8X9",
+        "denominacion": "FFGGHH",
+        "cantidad": "6"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "Mazda",
+        "modelo": "R5",
+        "fabricante": "Mazda",
+        "serial_carroceria": "1XF1",
+        "marca": "Mazda",
+        "ubicacion": "Cartanal",
+        "serie": "XX1",
+        "serial_motor": "1F2F3F",
+        "color": "Beige"
+    },
+    "popupB": {
+        "peso_operaciones": "1500",
+        "neumaticos": "4L",
+        "modelo_motor": "1Xengine",
+        "transmision": "Trasmision",
+        "revoluciones_motor": "123",
+        "combustible": "gas",
+        "potencia_neta": "15000",
+        "peso_bruto_trabajo": "3000",
+        "torque_neto": "15000",
+        "voltaje": "360",
+        "sistema_alimentacion": "electric",
+        "cilindros": "4"
+    },
+    "popupC": {
+        "codigo": "X8X9",
+        "denominacion": "FFGGHH",
+        "cantidad": "6"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "Mazda",
+        "modelo": "R5",
+        "fabricante": "Mazda",
+        "serial_carroceria": "1XF1",
+        "marca": "Mazda",
+        "ubicacion": "Cartanal",
+        "serie": "XX1",
+        "serial_motor": "1F2F3F",
+        "color": "Beige"
+    },
+    "popupB": {
+        "peso_operaciones": "1500",
+        "neumaticos": "4L",
+        "modelo_motor": "1Xengine",
+        "transmision": "Trasmision",
+        "revoluciones_motor": "123",
+        "combustible": "gas",
+        "potencia_neta": "15000",
+        "peso_bruto_trabajo": "3000",
+        "torque_neto": "15000",
+        "voltaje": "360",
+        "sistema_alimentacion": "electric",
+        "cilindros": "4"
+    },
+    "popupC": {
+        "codigo": "X8X9",
+        "denominacion": "FFGGHH",
+        "cantidad": "6"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "Mazda",
+        "modelo": "R5",
+        "fabricante": "Mazda",
+        "serial_carroceria": "1XF1",
+        "marca": "Mazda",
+        "ubicacion": "Cartanal",
+        "serie": "XX1",
+        "serial_motor": "1F2F3F",
+        "color": "Beige"
+    },
+    "popupB": {
+        "peso_operaciones": "1500",
+        "neumaticos": "4L",
+        "modelo_motor": "1Xengine",
+        "transmision": "Trasmision",
+        "revoluciones_motor": "123",
+        "combustible": "gas",
+        "potencia_neta": "15000",
+        "peso_bruto_trabajo": "3000",
+        "torque_neto": "15000",
+        "voltaje": "360",
+        "sistema_alimentacion": "electric",
+        "cilindros": "4"
+    },
+    "popupC": {
+        "codigo": "X8X9",
+        "denominacion": "FFGGHH",
+        "cantidad": "6"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "X1",
+        "referencia": "Mazda",
+        "modelo": "R5",
+        "fabricante": "Mazda",
+        "serial_carroceria": "1XF1",
+        "marca": "Mazda",
+        "ubicacion": "Cartanal",
+        "serie": "XX1",
+        "serial_motor": "1F2F3F",
+        "color": "Beige"
+    },
+    "popupB": {
+        "peso_operaciones": "1500",
+        "neumaticos": "4L",
+        "modelo_motor": "1Xengine",
+        "transmision": "Trasmision",
+        "revoluciones_motor": "123",
+        "combustible": "gas",
+        "potencia_neta": "15000",
+        "peso_bruto_trabajo": "3000",
+        "torque_neto": "15000",
+        "voltaje": "360",
+        "sistema_alimentacion": "electric",
+        "cilindros": "4"
+    },
+    "popupC": {
+        "codigo": "X8X9",
+        "denominacion": "FFGGHH",
+        "cantidad": "6"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "test",
+        "referencia": "test",
+        "modelo": "test",
+        "fabricante": "test",
+        "serial_carroceria": "test",
+        "marca": "test",
+        "ubicacion": "test",
+        "serie": "test",
+        "serial_motor": "test",
+        "color": "test"
+    },
+    "popupB": {
+        "peso_operaciones": "test",
+        "neumaticos": "test",
+        "modelo_motor": "test",
+        "transmision": "test",
+        "revoluciones_motor": "test",
+        "combustible": "test",
+        "potencia_neta": "test",
+        "peso_bruto_trabajo": "test",
+        "torque_neto": "test",
+        "voltaje": "test",
+        "sistema_alimentacion": "test",
+        "cilindros": "test"
+    },
+    "popupC": {
+        "codigo": "test",
+        "denominacion": "test",
+        "cantidad": "test"
+    },
+    "popupD": {
+        "fecha_fabricacion": "test",
+        "fecha_en_obra": "test",
+        "tiempo_funcionamiento": "test"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "Aplanadora",
+        "referencia": "R15",
+        "modelo": "300f",
+        "fabricante": "Caterpilar",
+        "serial_carroceria": "1xf1",
+        "marca": "Cat",
+        "ubicacion": "test",
+        "serie": "test",
+        "serial_motor": "0002",
+        "color": "negro"
+    },
+    "popupB": {
+        "peso_operaciones": "3000",
+        "neumaticos": "no aqplica",
+        "modelo_motor": "15000",
+        "transmision": "Automatica",
+        "revoluciones_motor": "6000",
+        "combustible": "gas",
+        "potencia_neta": "8000",
+        "peso_bruto_trabajo": "20000",
+        "torque_neto": "20000",
+        "voltaje": "30",
+        "sistema_alimentacion": "|test",
+        "cilindros": "4"
+    },
+    "popupC": {
+        "codigo": "001",
+        "denominacion": "001",
+        "cantidad": "001"
+    },
+    "popupD": {
+        "fecha_fabricacion": "06\/03\/1999",
+        "fecha_en_obra": "06\/03\/2000",
+        "tiempo_funcionamiento": "240"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "cliente_id": "12",
+        "equipo": "X2",
+        "referencia": "RR1",
+        "modelo": "Nissan",
+        "fabricante": "Nissan",
+        "serial_carroceria": "1245s",
+        "marca": "Nissan",
+        "ubicacion": "25asd",
+        "serie": "3",
+        "serial_motor": "12587946",
+        "color": "rojo"
+    },
+    "popupB": {
+        "peso_operaciones": "1000",
+        "neumaticos": "6",
+        "modelo_motor": "15",
+        "transmision": "145sd",
+        "revoluciones_motor": "1500",
+        "combustible": "Gas",
+        "potencia_neta": "16000",
+        "peso_bruto_trabajo": "1200",
+        "torque_neto": "15800",
+        "voltaje": "320",
+        "sistema_alimentacion": "Electric",
+        "cilindros": "6"
+    },
+    "popupC": {
+        "codigo": "1739",
+        "denominacion": "15941",
+        "cantidad": "10"
+    },
+    "popupD": {
+        "fecha_fabricacion": "11\/20\/2020",
+        "fecha_en_obra": "11\/20\/2024",
+        "tiempo_funcionamiento": "15000"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "equipo": "Excavadora",
+        "referencia": "EWR",
+        "modelo": "test",
+        "fabricante": "test",
+        "serial_carroceria": "11111",
+        "marca": "test",
+        "ubicacion": "Malaga",
+        "serie": "test112",
+        "serial_motor": "test3344",
+        "color": "Blanco"
+    },
+    "popupB": {
+        "peso_operaciones": "2000",
+        "neumaticos": "no aplica",
+        "modelo_motor": "wt34",
+        "transmision": "Idraulica",
+        "revoluciones_motor": "20000",
+        "combustible": "Gas",
+        "potencia_neta": "50000",
+        "peso_bruto_trabajo": "50000",
+        "torque_neto": "50000",
+        "voltaje": "3000",
+        "sistema_alimentacion": "test",
+        "cilindros": "6"
+    },
+    "popupC": {
+        "codigo": "test11222",
+        "denominacion": "test11222",
+        "cantidad": "4"
+    },
+    "popupD": {
+        "fecha_fabricacion": "06\/03\/1999",
+        "fecha_en_obra": "06\/03\/2000",
+        "tiempo_funcionamiento": "240"
+    },
+    "admin_id": 1
+}{
+    "popupA": {
+        "cliente_id": "7",
+        "equipo": "Excavadora",
+        "referencia": "testwre",
+        "modelo": "testtvb",
+        "fabricante": "test",
+        "serial_carroceria": "3344",
+        "marca": "test",
+        "ubicacion": "Malaga",
+        "serie": "test3344",
+        "serial_motor": "tt5567",
+        "color": "Blanco"
+    },
+    "popupB": {
+        "peso_operaciones": "6000",
+        "neumaticos": "No Aplica",
+        "modelo_motor": "tg5678",
+        "transmision": "Idraulica",
+        "revoluciones_motor": "60000",
+        "combustible": "Gas",
+        "potencia_neta": "7000",
+        "peso_bruto_trabajo": "790",
+        "torque_neto": "7000",
+        "voltaje": "5000",
+        "sistema_alimentacion": "test",
+        "cilindros": "8"
+    },
+    "popupC": {
+        "codigo": "112233",
+        "denominacion": "test123",
+        "cantidad": "5"
+    },
+    "popupD": {
+        "fecha_fabricacion": "06\/03\/1999",
+        "fecha_en_obra": "06\/03\/2000",
+        "tiempo_funcionamiento": "240"
+    },
+    "admin_id": 1
+}

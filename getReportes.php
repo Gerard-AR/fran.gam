@@ -6,9 +6,9 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 // Conectar a la base de datos
 $host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'gamba-database'; // Cambia según tu base de datos
+$user = 'admin_gamba';
+$pass = 'User$$123456';
+$db = 'gamba_db'; // Cambia según tu base de datos
 
 $conn = new mysqli($host, $user, $pass, $db);
 

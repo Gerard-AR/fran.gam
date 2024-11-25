@@ -3,8 +3,8 @@ session_start(); // Asegúrate de iniciar la sesión
 header('Content-Type: application/json');
 
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "admin_gamba";
+$password = "User$$123456";
 $dbname = "gamba_db"; // Asegúrate de que el nombre de la base de datos sea correcto
 
 // Crear conexión

@@ -1,0 +1,111 @@
+<?php
+header('Content-Type: application/json');
+
+$servername = "localhost";
+$username = "admin_gamba";
+$password = "User$$123456";
+$dbname = "gamba_db";
+
+// Conexión a la base de datos
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    respond(false, "Conexión fallida: " . $conn->connect_error, 500);
+}
+
+session_start();
+$admin_id = $_SESSION['admin_id'] ?? null;
+
+if ($admin_id === null) {
+    respond(false, "ID de administrador no disponible en la sesión.", 401);
+}
+
+// Leer y registrar el JSON recibido
+$data = json_decode(file_get_contents("php://input"), true);
+
+// Ruta del archivo para guardar el log
+$logFile = __DIR__ . "/logs/datos_recibidos.json";
+if (!file_exists(dirname($logFile))) {
+    mkdir(dirname($logFile), 0755, true);
+}
+file_put_contents($logFile, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), FILE_APPEND);
+
+if (!$data) {
+    respond(false, "No se recibieron datos.", 400);
+}
+
+// Desanidar los datos
+$flattenedData = array_merge(
+    $data['popupA'] ?? [],
+    $data['popupB'] ?? [],
+    $data['popupC'] ?? [],
+    $data['popupD'] ?? []
+);
+
+$flattenedData['admin_id'] = $data['admin_id'] ?? $admin_id;
+
+// Validación de campos requeridos
+$required_fields = [
+    'equipo', 'referencia', 'modelo', 'fabricante', 'serial_carroceria', 
+    'marca', 'ubicacion', 'serie', 'serial_motor', 'color', 'peso_operaciones', 
+    'neumaticos', 'modelo_motor', 'transmision', 'revoluciones_motor', 
+    'combustible', 'potencia_neta', 'peso_bruto_trabajo', 'torque_neto', 
+    'voltaje', 'sistema_alimentacion', 'cilindros', 'codigo', 'denominacion', 
+    'cantidad', 'fecha_fabricacion', 'fecha_en_obra', 'tiempo_funcionamiento'
+];
+
+foreach ($required_fields as $field) {
+    if (!isset($flattenedData[$field])) {
+        respond(false, "Falta el campo: $field", 400);
+    }
+}
+
+// Inserción en la base de datos
+function createMachine($data, $conn) {
+    $stmt = $conn->prepare(
+        "INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+        marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+        transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+        torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+        fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, admin_id) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+    );
+
+    $stmt->bind_param(
+        "ssssssssssssssssssssssssssss",
+        $data['equipo'], $data['referencia'], $data['modelo'], $data['fabricante'], 
+        $data['serial_carroceria'], $data['marca'], $data['ubicacion'], $data['serie'], 
+        $data['serial_motor'], $data['color'], $data['peso_operaciones'], $data['neumaticos'], 
+        $data['modelo_motor'], $data['transmision'], $data['revoluciones_motor'], 
+        $data['combustible'], $data['potencia_neta'], $data['peso_bruto_trabajo'], 
+        $data['torque_neto'], $data['voltaje'], $data['sistema_alimentacion'], 
+        $data['cilindros'], $data['codigo'], $data['denominacion'], $data['cantidad'], 
+        $data['fecha_fabricacion'], $data['fecha_en_obra'], $data['tiempo_funcionamiento'], $data['admin_id']
+    );
+
+    if ($stmt->execute()) {
+        $stmt->close();
+        return true;
+    } else {
+        $error = $stmt->error;
+        $stmt->close();
+        return $error;
+    }
+}
+
+// Procesar solicitud
+$result = createMachine($flattenedData, $conn);
+if ($result === true) {
+    respond(true, "Máquina creada exitosamente.");
+} else {
+    respond(false, "Error al crear máquina: " . $result, 500);
+}
+
+$conn->close();
+
+// Función para responder en JSON
+function respond($success, $message, $statusCode = 200) {
+    http_response_code($statusCode);
+    echo json_encode(["success" => $success, "message" => $message]);
+    exit();
+}
+

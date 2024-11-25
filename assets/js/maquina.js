@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const adminId = 1; // Ajusta el admin_id aquí o establece una forma de obtenerlo dinámicamente
+    const adminId = 1; // Ajusta según sea necesario
 
+    // Función para obtener la página actual
     const getCurrentPage = () => {
         const path = window.location.pathname;
         return path.substring(path.lastIndexOf('/') + 1);
     };
 
+    // Función para activar el menú hover según la página actual
     const activarMenuHover = () => {
         const currentPage = getCurrentPage();
         const menuItems = document.querySelectorAll('.navigation ul li a');
@@ -19,8 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    activarMenuHover();
-
+    // Toggle de navegación
     const toggle = document.querySelector(".toggle");
     const navigation = document.querySelector(".navigation");
     const main = document.querySelector(".main");
@@ -30,6 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
         main.classList.toggle("active");
     };
 
+    activarMenuHover();
+
+    // Popups y formularios
     const createMaquinaBtn = document.querySelector('.create-Maquina-btn');
     const createMaquinaPopups = [
         'createMaquinaPopupA',
@@ -58,19 +62,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Mostrar el siguiente popup
     window.showNextPopup = (currentPopupId, nextPopupId) => {
-        document.getElementById(currentPopupId).style.display = 'none';
+        const currentPopup = document.getElementById(currentPopupId);
+        const form = currentPopup.querySelector('form');
+        const popupKey = currentPopupId.replace('createMaquinaPopup', 'popup'); // Convierte el ID del popup a su clave en formData
+
+        if (form) {
+            const formPartData = new FormData(form);
+            const formValues = {};
+            
+            // Convierte FormData a un objeto plano
+            formPartData.forEach((value, key) => {
+                formValues[key] = value;
+            });
+
+            // Guarda los datos en formData bajo la clave correspondiente
+            formData[popupKey] = { ...formValues };
+
+            console.log(`Datos extraídos de ${popupKey}:`, formValues);
+            console.log('Estado acumulado de formData:', formData);
+        } else {
+            console.error(`No se encontró un formulario en ${currentPopupId}`);
+        }
+
+        currentPopup.style.display = 'none';
         if (nextPopupId) {
-            document.getElementById(nextPopupId).style.display = 'flex';
+            const nextPopup = document.getElementById(nextPopupId);
+            nextPopup.style.display = 'flex';
         }
     };
 
     const handleFormSubmit = (event, form, nextPopupId, popupKey) => {
         event.preventDefault();
+
         let formPartData = new FormData(form);
+        let formValues = {};
+
         formPartData.forEach((value, key) => {
-            formData[popupKey][key] = value;
+            formValues[key] = value;
         });
+
+        formData[popupKey] = formValues;
+
+        console.log(`Datos guardados en ${popupKey}:`, formData[popupKey]);
         showNextPopup(form.parentElement.parentElement.id, nextPopupId);
     };
 
@@ -89,8 +124,27 @@ document.addEventListener('DOMContentLoaded', () => {
     setupFormHandlers();
 
     window.submitFormData = () => {
+        const popupDForm = document.getElementById('createMaquinaFormD');
+        if (popupDForm) {
+            const formPartData = new FormData(popupDForm);
+            const formValues = {};
+
+            formPartData.forEach((value, key) => {
+                formValues[key] = value;
+            });
+
+            formData.popupD = { ...formValues };
+
+            console.log("Datos extraídos de popupD:", formValues);
+        } else {
+            console.error("No se encontró el formulario en popupD");
+        }
+
+        console.log("Datos completos a enviar al servidor:", { ...formData, admin_id: adminId });
+
         fetch('createMaquina.php', {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -98,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(response => response.json())
         .then(data => {
+            console.log("Respuesta del servidor:", data);
             if (data.success) {
                 alert('Máquina creada exitosamente');
                 fetchMaquinas();
@@ -110,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.error('Error en la solicitud:', error);
             alert('Error al crear la máquina');
         });
     };
@@ -118,7 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const fetchMaquinas = () => {
         fetch(`getMaquinas.php?admin_id=${adminId}`)
             .then(response => {
-                console.log('Response status:', response.status);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -126,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(maquinas => {
                 const tbody = document.querySelector('#tablaMaquinas tbody');
-                tbody.innerHTML = ''; // Limpia la tabla antes de llenarla
+                tbody.innerHTML = '';
 
                 maquinas.forEach(maquina => {
                     const row = document.createElement('tr');
@@ -151,11 +205,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             })
             .catch(error => {
-                console.error('Error fetching machines:', error);
-                alert('Ocurrió un error al intentar obtener las máquinas. Verifica la consola para más detalles.');
+                console.error('Error al cargar las máquinas:', error);
+                alert('Error al obtener las máquinas. Verifica la consola.');
             });
     };
 
+    const fetchClientList = () => {
+        fetch(`Clientlist.php?admin_id=${adminId}`, { credentials: 'include' })
+            .then(response => response.json())
+            .then(data => {
+                const clienteSelect = document.getElementById('cliente_id');
+                clienteSelect.innerHTML = '';
+
+                if (data.success && data.data.length > 0) {
+                    data.data.forEach(cliente => {
+                        const option = document.createElement('option');
+                        option.value = cliente.id;
+                        option.textContent = `${cliente.nombre} ${cliente.apellido} (${cliente.empresa || 'Sin empresa'})`;
+                        clienteSelect.appendChild(option);
+                    });
+                } else {
+                    console.warn("No se encontraron clientes:", data.message);
+                    clienteSelect.innerHTML = '<option value="">No hay clientes disponibles</option>';
+                }
+            })
+            .catch(error => {
+                console.error('Error al cargar la lista de clientes:', error);
+            });
+    };
+
+    // Buscar máquinas
     const filtrarMaquinas = () => {
         const searchInput = document.getElementById('searchInputmaquina').value.toLowerCase();
         const rows = document.querySelectorAll('#tablaMaquinas tbody tr');
@@ -167,5 +246,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     document.getElementById('searchInputmaquina').addEventListener('input', filtrarMaquinas);
+
+    fetchClientList();
     fetchMaquinas();
 });
+

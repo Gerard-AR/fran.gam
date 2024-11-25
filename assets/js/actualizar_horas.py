@@ -6,9 +6,9 @@ from datetime import datetime
 # Conexión a la base de datos
 db = pymysql.connect(
     host="localhost",
-    user="root",  # Cambia esto si tienes otro usuario
-    password="",  # Añade la contraseña si la tienes
-    database="gamba-database"  # Cambia esto al nombre de tu base de datos
+    user="admin_gamba",  # Cambia esto si tienes otro usuario
+    password="User$$123456",  # Añade la contraseña si la tienes
+    database="gamba_db"  # Cambia esto al nombre de tu base de datos
 )
 
 # Ejecutar el script SQL
@@ -20,7 +20,7 @@ def actualizar_horas():
             ahora = datetime.now(miami_tz)
             
             # Verificar si la hora actual está dentro del rango de trabajo
-            if ahora.time() >= datetime.strptime('07:00:00', '%H:%M:%S').time() and ahora.time() < datetime.strptime('22:00:00', '%H:%M:%S').time():
+            if ahora.time() >= datetime.strptime('07:00:00', '%H:%M:%S').time() and ahora.time() < datetime.strptime('00:00:00', '%H:%M:%S').time():
                 # Ejecutar el script SQL
                 sql = "UPDATE maquinas SET tiempo_funcionamiento = tiempo_funcionamiento + 1"
                 cursor.execute(sql)

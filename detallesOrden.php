@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "gamba-database";
+$username = "admin_gamba";
+$password = "User$$123456";
+$dbname = "gamba_db";
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);

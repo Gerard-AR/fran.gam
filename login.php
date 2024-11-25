@@ -4,8 +4,8 @@ header('Content-Type: application/json');
 
 // Configuración de la base de datos
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "admin_gamba";
+$password = "User$$123456";
 $dbname = "gamba_db";
 
 // Crear conexión
@@ -28,7 +28,8 @@ if ($admin_result->num_rows > 0) {
     // Verificar la contraseña
     if (password_verify($password, $admin['password'])) {
         // La contraseña es correcta
-        $_SESSION['admin_id'] = $admin['id']; // Guardar admin_id en la sesión
+	    $_SESSION['admin_id'] = $admin['id']; // Guardar admin_id en la sesión
+	    error_log("Sesión iniciada para admin_id: " . $_SESSION['admin_id']);
         echo json_encode([
             'success' => true,
             'message' => 'Inicio de sesión exitoso',
@@ -49,6 +50,7 @@ if ($cliente_result->num_rows > 0) {
     $cliente = $cliente_result->fetch_assoc();
     // Verificar la contraseña
     if (password_verify($password, $cliente['password'])) {
+	$_SESSION['admin_id'] = $cliente['admin_id']; // Guardar admin_id en la sesión
         // La contraseña es correcta
         echo json_encode([
             'success' => true,
@@ -70,6 +72,7 @@ if ($tecnico_result->num_rows > 0) {
     $tecnico = $tecnico_result->fetch_assoc();
     // Verificar la contraseña
     if (password_verify($password, $tecnico['password'])) {
+	$_SESSION['admin_id'] = $tecnico['admin_id']; // Guardar admin_id en la sesión
         // La contraseña es correcta
         echo json_encode([
             'success' => true,

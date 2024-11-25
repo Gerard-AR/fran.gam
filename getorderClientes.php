@@ -3,9 +3,9 @@ header('Content-Type: application/json');
 
 // Conexión a la base de datos
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "gamba-database";
+$username = "admin_gamba";
+$password = "User$$123456";
+$dbname = "gamba_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

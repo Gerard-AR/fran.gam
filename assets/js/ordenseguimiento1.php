@@ -1,9 +1,9 @@
 <?php
 // Asegúrate de reemplazar "localhost", "root", "", "gamba-database" con tus credenciales correctas.
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "gamba-database";
+$username = "admin_gamba";
+$password = "User$$123456";
+$dbname = "gamba_db";
 
 // Conexión a la base de datos
 $conn = new mysqli($servername, $username, $password, $dbname);

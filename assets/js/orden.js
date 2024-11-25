@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para obtener el nombre de la página actual
     const getCurrentPage = () => {
         const path = window.location.pathname;
-        return path.substring(path.lastIndexOf('/') + 1); // Obtener el nombre del archivo (ej. Ordenes.html)
+        return path.substring(path.lastIndexOf('/') + 1); // Obtener el nombre del archivo
     };
 
     // Función para activar el efecto hover en el menú según la página actual
@@ -32,10 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navigation = document.querySelector(".navigation");
     const main = document.querySelector(".main");
 
-    toggle.onclick = function () {
-        navigation.classList.toggle("active");
-        main.classList.toggle("active");
-    };
+    if (toggle && navigation && main) {
+        toggle.onclick = function () {
+            navigation.classList.toggle("active");
+            main.classList.toggle("active");
+        };
+    }
 
     const createOrdenBtn = document.querySelector('.create-Orden-btn');
     const createOrdenPopups = [
@@ -52,9 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let formData = new FormData();
 
     // Mostrar popup A al hacer clic en el botón de crear orden
-    createOrdenBtn.addEventListener('click', () => {
-        document.getElementById('createOrdenPopupA').style.display = 'flex';
-    });
+    if (createOrdenBtn) {
+        createOrdenBtn.addEventListener('click', () => {
+            document.getElementById('createOrdenPopupA').style.display = 'flex';
+        });
+    } else {
+        console.error("El botón para crear órdenes no existe en el DOM.");
+    }
 
     // Cerrar popups al hacer clic fuera de ellos
     window.addEventListener('click', (event) => {
@@ -70,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.showNextPopup = (currentPopupId, nextPopupId) => {
         document.getElementById(currentPopupId).style.display = 'none';
         document.getElementById(nextPopupId).style.display = 'flex';
-    }
+    };
 
     // Manejo de envío de formularios
     const handleFormSubmit = (event, form, nextPopupId) => {
@@ -82,12 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             submitFormData();
         }
-    }
+    };
 
     createOrdenPopups.forEach((popupId, index) => {
         const form = document.getElementById(`createOrdenForm${String.fromCharCode(65 + index)}`);
         if (form) {
-            form.addEventListener('submit', (event) => handleFormSubmit(event, form, index < createOrdenPopups.length - 1 ? createOrdenPopups[index + 1] : null));
+            form.addEventListener('submit', (event) => handleFormSubmit(event, form, createOrdenPopups[index + 1]));
         }
     });
 
@@ -103,29 +109,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     row.innerHTML = `
                         <td>${orden.cliente_id}</td>
                         <td>${orden.equipo}</td>
-                        <td>${orden.tipo_uso}</td>
-                        <td>${orden.objetivo}</td>
-                        <td>${orden.tipo_trabajo}</td>
-                        <td>${orden.fecha_inicio}</td>
-                        <td>${orden.fecha_culminacion}</td>
+                        <td>${orden.marca}</td>
+                        <td>${orden.modelo}</td>
+                        <td>${orden.serie}</td>
+                        <td>${orden.nro_bien}</td>
+                        <td>${orden.ano}</td>
                         <td>${orden.serial_motor}</td>
-                        <td>${orden.serial_carroseria}</td>
-                        <td>${orden.descripcion_tarea}</td>
-                        <td>${orden.observacion_general}</td>
                         <td>
                             <button onclick="eliminarOrden(${orden.id})">Eliminar</button>
-                            <button onclick="verDetallesOrden('4')">Detalles</button>
-                            </td>
-
-
-
-                            
+                            <button onclick="verDetallesOrden(${orden.id})">Detalles</button>
+                        </td>
                     `;
                     tbody.appendChild(row);
                 });
             })
             .catch(error => console.error('Error fetching orders:', error));
-    }
+    };
 
     // Función para mostrar los detalles de una orden
     function detallesOrden(id) {
@@ -139,9 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(response => response.json())
         .then(data => {
-            // Verificar la respuesta del servidor
             if (data.success) {
-                // Aquí puedes implementar la lógica para mostrar los detalles de la orden en la interfaz
                 mostrarDetallesOrden(data.orden); // Suponiendo que tienes una función para mostrar los detalles
             } else {
                 alert(data.message); // Mostrar mensaje de error si no se pudieron obtener los detalles
@@ -149,13 +146,12 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('Hubo un problema al obtener los detalles de la orden'); // Mostrar mensaje de error genérico
+            alert('Hubo un problema al obtener los detalles de la orden');
         });
     }
 
     // Función para mostrar detalles de la orden en la interfaz (opcional)
     function mostrarDetallesOrden(orden) {
-        // Aquí puedes implementar la lógica para mostrar los detalles en tu interfaz
         console.log(orden);
     }
 
@@ -178,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error:', error);
             alert('Error al crear la orden de trabajo');
         });
-    }
+    };
 
     // Función para filtrar las órdenes según el texto de búsqueda
     const filtrarOrdenes = () => {
@@ -189,21 +185,30 @@ document.addEventListener('DOMContentLoaded', () => {
             const match = cells.some(cell => cell.textContent.toLowerCase().includes(searchInput));
             row.style.display = match ? '' : 'none';
         });
-    }
+    };
 
     // Agregar evento de búsqueda
-    document.getElementById('searchInputorden').addEventListener('input', filtrarOrdenes);
+    const searchInputorden = document.getElementById('searchInputorden');
+    if (searchInputorden) {
+        searchInputorden.addEventListener('input', filtrarOrdenes);
+    }
 
     // Llamar a fetchOrdenes al cargar la página para mostrar las órdenes existentes
     fetchOrdenes();
+
 });
+
 // Evento para seleccionar cliente
 const clienteSelect = document.getElementById('clienteSelect');
-clienteSelect.addEventListener('change', (e) => {
-    const clienteId = e.target.value;
-    if (clienteId) {
-        fetchReportesPorCliente(clienteId);
-    } else {
-        console.error("No se ha seleccionado un cliente.");
-    }
-});
+if (clienteSelect) {
+    clienteSelect.addEventListener('change', (e) => {
+        const clienteId = e.target.value;
+        if (clienteId) {
+            fetchReportesPorCliente(clienteId);
+        } else {
+            console.error("No se ha seleccionado un cliente.");
+        }
+    });
+} else {
+    console.error("El elemento clienteSelect no existe en el DOM.");
+}

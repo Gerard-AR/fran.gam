@@ -2,9 +2,9 @@
 header('Content-Type: application/json'); // Asegurarse de que el contenido devuelto sea JSON
 
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "gamba-database";
+$username = "admin_gamba";
+$password = "User$$123456";
+$dbname = "gamba_db";
 
 $response = array('success' => false, 'message' => 'Unknown error');
 

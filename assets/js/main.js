@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para obtener clientes desde el backend
     const obtenerClientes = async () => {
         try {
-            let response = await fetch(`http://localhost/korsat/Gamba/Dashboard/getClientes.php?admin_id=${adminId}`);
+            let response = await fetch(`/getClient.php?admin_id=${adminId}`);
             if (!response.ok) {
                 throw new Error('Error al obtener los clientes');
             }

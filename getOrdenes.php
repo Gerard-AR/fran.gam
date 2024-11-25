@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "gamba-database";
+$username = "admin_gamba";
+$password = "User$$123456";
+$dbname = "gamba_db";
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -15,9 +15,25 @@ if ($conn->connect_error) {
 // Establecer encabezado para JSON
 header('Content-Type: application/json');
 
-// Consultar la tabla de órdenes con nombres de columnas ajustados
-$sql = "SELECT id, cliente_id, equipo, marca, modelo, serie, nro_bien, ano, serial_motor, serial_carroceria, color, tipo_uso, ubicacion, objetivo, tipo_trabajo, fecha_inicio, fecha_culminacion, duracion, periodo, solicita, autoriza, ejecuta, supervisa, descripcion_tarea, tiempo_estimado, tiempo_real, codigo_repuesto, descripcion_repuesto, cantidad_planificada, cantidad_utilizada, categoria, nombre_personal, horas_requeridas, horas_normales, horas_extras, codigo_epp, descripcion_epp, cantidad_planificada_epp, cantidad_utilizada_epp, observacion, observacion_general FROM ordenes";
-$result = $conn->query($sql);
+// Obtener el admin_id desde la consulta
+$admin_id = isset($_GET['admin_id']) ? intval($_GET['admin_id']) : 0;
+
+// Validar si admin_id está presente
+if ($admin_id === 0) {
+    echo json_encode(["error" => "admin_id es requerido"]);
+    $conn->close();
+    exit();
+}
+
+// Consultar la tabla de órdenes filtrando por admin_id
+$sql = "SELECT id, cliente_id, equipo, marca, modelo, serie, nro_bien, ano, serial_motor
+        FROM ordenes_trabajo 
+        WHERE admin_id = ?"; // Filtrar por admin_id
+
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $admin_id);
+$stmt->execute();
+$result = $stmt->get_result();
 
 $ordenes = array();
 
@@ -28,7 +44,10 @@ if ($result->num_rows > 0) {
     }
 }
 
+// Cerrar la conexión
+$stmt->close();
 $conn->close();
 
+// Devolver las órdenes en formato JSON
 echo json_encode($ordenes);
 ?>

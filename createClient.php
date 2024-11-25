@@ -4,8 +4,8 @@ header('Content-Type: application/json');
 
 // Configuración de la base de datos
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "admin_gamba";
+$password = "User$$123456";
 $dbname = "gamba_db";
 
 // Crear conexión
@@ -54,3 +54,4 @@ if (isset($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['empresa
 
 $conn->close();
 ?>
+

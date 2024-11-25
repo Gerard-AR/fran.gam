@@ -1,9 +1,15 @@
 <?php
+
+// Configuración de CORS
+header("Access-Control-Allow-Origin: https://gamba.hitos.tech"); // Cambia este dominio según el dominio permitido
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
 // Asegúrate de reemplazar "localhost", "root", "", "gamba-database" con tus credenciales correctas.
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "gamba-database";
+$username = "admin_gamba";
+$password = "User$$123456";
+$dbname = "gamba_db";
 
 // Conexión a la base de datos
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,7 +19,7 @@ if ($conn->connect_error) {
 }
 
 // Selección de máquinas que alcanzaron 250 horas o más
-$sql = "SELECT id, equipo, marca, modelo, serie, serial_motor, serial_carroceria, color, ubicacion, tiempo_funcionamiento FROM maquinas WHERE tiempo_funcionamiento >= 250";
+$sql = "SELECT id, equipo, marca, modelo, serie, serial_motor, serial_carroceria, color, ubicacion, tiempo_funcionamiento FROM machines WHERE tiempo_funcionamiento >= 250";
 $result = $conn->query($sql);
 
 if ($result && $result->num_rows > 0) {
@@ -42,7 +48,7 @@ if ($result && $result->num_rows > 0) {
             ),
         );
         $context  = stream_context_create($options);
-        $result_validation = file_get_contents('http://localhost/korsat/Gamba/Dashboard/assets/js/validar_insercion.php', false, $context);
+        $result_validation = file_get_contents('/var/www/Gamba/fran.gam/assets/js/validar_insercion.php', false, $context);
 
         // Verificar si la respuesta no es falsa y es un JSON válido
         if ($result_validation === false) {

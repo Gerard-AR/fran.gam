@@ -1,0 +1,182 @@
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+            marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+            transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+            torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+            fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, cliente_id, admin_id) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","1","2","3","4","5","6","7","8","9","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","2020-11-20","2024-11-20","15000",1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+            marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+            transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+            torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+            fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, cliente_id, admin_id) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","1","2","3","4","5","6","7","8","9","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","2020-11-20","2024-11-20","15000",1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+            marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+            transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+            torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+            fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, cliente_id, admin_id) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","1","2","3","4","5","6","7","8","9","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","2020-11-20","2024-11-20","15000",1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, cliente_id, admin_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","1","2","3","4","5","6","7","8","9","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","2020-11-20","2024-11-20","15000",1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, cliente_id, admin_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","2020-11-20","2024-11-20","15000",1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, cliente_id, admin_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","2020-11-20","2024-11-20","15000",1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, cliente_id, admin_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","2020-11-20","2024-11-20","15000",1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, cliente_id, admin_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","2020-11-20","2024-11-20","15000",1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, cliente_id, admin_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","2020-11-20","2024-11-20","15000",1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, cliente_id, admin_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","2020-11-20","2024-11-20","15000",1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, cliente_id, admin_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","2020-11-20","2024-11-20","15000",1,7]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, cliente_id, admin_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","ADF","300F","Micro","VRF1112","Huyndai","Cart","RM1","3FHN","Rojo","5ww","Michelin","4f","3fT","1599","Gas","1900BTU","1600 BTU","5000","240","Electric","6F","5551267AF","RJSNN4","29","2020-11-20","2024-11-20","15000",1,7]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, cliente_id, admin_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","ADF","300F","Micro","VRF1112","Huyndai","Cart","RM1","3FHN","Rojo","5ww","Michelin","4f","3fT","1599","Gas","1900BTU","1600 BTU","5000","240","Electric","6F","5551267AF","RJSNN4","29","2020-11-20","2024-11-20","15000",1,7]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, cliente_id, admin_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","ADF","300F","Micro","VRF1112","Huyndai","Cart","RM1","3FHN","Rojo","5ww","Michelin","4f","3fT","1599","Gas","1900BTU","1600 BTU","5000","240","Electric","6F","5551267AF","RJSNN4","29","2020-11-20","2024-11-20","15000",1,7]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, admin_id, cliente_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","ADF","300F","Micro","VRF1112","Huyndai","Cart","RM1","3FHN","Rojo","5ww","Michelin","4f","3fT","1599","Gas","1900BTU","1600 BTU","5000","240","Electric","6F","5551267AF","RJSNN4","29","2020-11-20","2024-11-20","15000",1,7]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, admin_id, cliente_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","Mazda","R5","Mazda","1XF1","Mazda","Cartanal","XX1","1F2F3F","Beige","1500","4L","1Xengine","Trasmision","123","gas","15000","3000","15000","360","electric","4","X8X9","FFGGHH","6","2020-11-20","2024-11-20","15000",1,7]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, admin_id, cliente_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","Mazda","R5","Mazda","1XF1","Mazda","Cartanal","XX1","1F2F3F","Beige","1500","4L","1Xengine","Trasmision","123","gas","15000","3000","15000","360","electric","4","X8X9","FFGGHH","6","2020-11-20","2024-11-20","15000",7,1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, admin_id, cliente_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","Mazda","R5","Mazda","1XF1","Mazda","Cartanal","XX1","1F2F3F","Beige","1500","4L","1Xengine","Trasmision","123","gas","15000","3000","15000","360","electric","4","X8X9","FFGGHH","6","2020-11-20","2024-11-20","15000",7,1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, admin_id, cliente_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","Mazda","R5","Mazda","1XF1","Mazda","Cartanal","XX1","1F2F3F","Beige","1500","4L","1Xengine","Trasmision","123","gas","15000","3000","15000","360","electric","4","X8X9","FFGGHH","6","2020-11-20","2024-11-20","15000",7,1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, admin_id, cliente_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","Mazda","R5","Mazda","1XF1","Mazda","Cartanal","XX1","1F2F3F","Beige","1500","4L","1Xengine","Trasmision","123","gas","15000","3000","15000","360","electric","4","X8X9","FFGGHH","6","2020-11-20","2024-11-20","15000",7,1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, admin_id, cliente_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","Mazda","R5","Mazda","1XF1","Mazda","Cartanal","XX1","1F2F3F","Beige","1500","4L","1Xengine","Trasmision","123","gas","15000","3000","15000","360","electric","4","X8X9","FFGGHH","6","2020-11-20","2024-11-20","15000",7,1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, admin_id, cliente_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["X1","Mazda","R5","Mazda","1XF1","Mazda","Cartanal","XX1","1F2F3F","Beige","1500","4L","1Xengine","Trasmision","123","gas","15000","3000","15000","360","electric","4","X8X9","FFGGHH","6","2020-11-20","2024-11-20","15000",7,1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, admin_id, cliente_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test",null,null,"test",7,1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, admin_id, cliente_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["Aplanadora","R15","300f","Caterpilar","1xf1","Cat","test","test","0002","negro","3000","no aqplica","15000","Automatica","6000","gas","8000","20000","20000","30","|test","4","001","001","001","1999-06-03","2000-06-03","240",7,1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, admin_id, cliente_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["12","X2","RR1","Nissan","Nissan","1245s","Nissan","25asd","3","12587946","rojo","1000","6","15","145sd","1500","Gas","16000","1200","15800","320","Electric","6","1739","15941","10","2020-11-20","2024-11-20","15000",1]
+INSERT INTO machines (equipo, referencia, modelo, fabricante, serial_carroceria, 
+    marca, ubicacion, serie, serial_motor, color, peso_operaciones, neumaticos, modelo_motor, 
+    transmision, revoluciones_motor, combustible, potencia_neta, peso_bruto_trabajo, 
+    torque_neto, voltaje, sistema_alimentacion, cilindros, codigo, denominacion, cantidad, 
+    fecha_fabricacion, fecha_en_obra, tiempo_funcionamiento, admin_id, cliente_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Valores: ["7","Excavadora","testwre","testtvb","test","3344","test","Malaga","test3344","tt5567","Blanco","6000","No Aplica","tg5678","Idraulica","60000","Gas","7000","790","7000","5000","test","8","112233","test123","5","1999-06-03","2000-06-03","240",1]

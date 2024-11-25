@@ -1,10 +1,14 @@
 <?php
 header('Content-Type: application/json');
+// Configuración de CORS
+header("Access-Control-Allow-Origin: https://gamba.hitos.tech"); // Cambia este dominio según el dominio permitido
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 // Configuración de la base de datos
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "admin_gamba";
+$password = "User$$123456";
 $dbname = "gamba_db";
 
 // Crear conexión
