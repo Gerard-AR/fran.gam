@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['admin_id'])) {
+    header("Location: login.php"); // Redirige al login si no hay sesión
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,10 +12,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnicos Ejemplo</title>
+    <title>Ordenes Ejemplo</title>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="./assets/css/style1.css">
-    <link rel="stylesheet" href="assets/css/clientes.css">
+    <link rel="stylesheet" href="assets/css/order.css">
+    <div id="main-content" data-admin-id="<?php echo htmlspecialchars($_SESSION['admin_id']); ?>"></div>
 </head>
 
 <body>
@@ -26,7 +34,7 @@
                 </li>
     
                 <li>
-                    <a href="inicio.html" id="alertLink" data-page="index">
+                    <a href="inicio.php" id="alertLink" data-page="index">
                         <span class="icon">
                             <svg width="25" height="25" viewBox="0 0 98.88 94.28" fill="currentColor"><path d="M69,6.9v7.77L78.18,22V6.9Zm16.1,20.64V5.75A5.74,5.74,0,0,0,79.33,0H67.83a5.75,5.75,0,0,0-5.75,5.75v3.4l-1.87-1.5a17.25,17.25,0,0,0-21.55,0L1.29,37.55A3.45,3.45,0,0,0,5.6,42.93l3.6-2.87V87.38H3.45a3.45,3.45,0,0,0,0,6.9h92a3.45,3.45,0,0,0,0-6.9H89.68V40.06l3.59,2.87a3.45,3.45,0,1,0,4.31-5.38Zm-2.3,7L55.9,13A10.33,10.33,0,0,0,43,13L16.1,34.54V87.38H32.19V67.61a62.19,62.19,0,0,1,.29-7.81,9.41,9.41,0,0,1,8.93-8.93,64.22,64.22,0,0,1,7.8-.28h.45a64.4,64.4,0,0,1,7.81.28A9.43,9.43,0,0,1,66.4,59.8a64.4,64.4,0,0,1,.28,7.81V87.38h16.1Zm-23,52.84V67.83a59,59,0,0,0-.23-7.11c-.2-1.49-.52-2-.78-2.22s-.74-.59-2.23-.79a59.53,59.53,0,0,0-7.11-.22,59.44,59.44,0,0,0-7.11.22c-1.5.2-2,.52-2.23.79a3.54,3.54,0,0,0-.79,2.22,61.78,61.78,0,0,0-.22,7.11V87.38ZM49.44,27.59a5.75,5.75,0,1,0,5.75,5.75A5.75,5.75,0,0,0,49.44,27.59ZM36.79,33.34A12.65,12.65,0,1,1,49.44,46,12.65,12.65,0,0,1,36.79,33.34Z"/></svg>
                         </span>
@@ -53,7 +61,7 @@
                 </li>
     
                 <li>
-                    <a href="Ordenes.html" id="ordersLink" data-page="ordenes">
+                    <a href="Ordenes.php" id="ordersLink" data-page="ordenes">
                         <span class="icon">
                             <svg width="25" height="25" viewBox="0 0 83.73 92.32" fill="currentColor"  ><path d="M21.52,8.63A9.67,9.67,0,0,1,31.13,0H52.6a9.67,9.67,0,0,1,9.61,8.63,55.48,55.48,0,0,1,8.52.68,15,15,0,0,1,8.28,4c2.59,2.59,3.7,5.84,4.22,9.71a117.8,117.8,0,0,1,.5,14.33V63.57a118,118,0,0,1-.5,14.33C82.71,81.76,81.6,85,79,87.6s-5.84,3.7-9.7,4.22a117.89,117.89,0,0,1-14.33.5H28.75a117.89,117.89,0,0,1-14.33-.5c-3.87-.52-7.12-1.63-9.7-4.22S1,81.76.5,77.9A118,118,0,0,1,0,63.57V37.34A117.8,117.8,0,0,1,.5,23C1,19.14,2.13,15.89,4.72,13.3a15,15,0,0,1,8.27-4A55.73,55.73,0,0,1,21.52,8.63Zm0,6.45a47.44,47.44,0,0,0-7.37.57,8.56,8.56,0,0,0-4.89,2.21c-1.19,1.19-2,2.85-2.39,6a116.71,116.71,0,0,0-.44,13.7V63.33A116.81,116.81,0,0,0,6.88,77c.43,3.15,1.2,4.82,2.39,6s2.86,2,6,2.38a114.08,114.08,0,0,0,13.7.45H54.75a114.08,114.08,0,0,0,13.7-.45c3.15-.42,4.82-1.19,6-2.38s2-2.86,2.39-6a116.81,116.81,0,0,0,.44-13.71V37.57a116.71,116.71,0,0,0-.44-13.7c-.43-3.16-1.2-4.82-2.39-6a8.56,8.56,0,0,0-4.89-2.21,47.44,47.44,0,0,0-7.37-.57,9.67,9.67,0,0,1-9.6,8.54H31.13A9.67,9.67,0,0,1,21.53,15.08Zm9.6-8.64a3.22,3.22,0,0,0-3.22,3.22V14a3.23,3.23,0,0,0,3.22,3.23H52.6A3.23,3.23,0,0,0,55.82,14V9.66A3.22,3.22,0,0,0,52.6,6.44ZM17.18,39.72A3.22,3.22,0,0,1,20.4,36.5h2.14a3.22,3.22,0,1,1,0,6.44H20.4A3.22,3.22,0,0,1,17.18,39.72Zm15,0a3.22,3.22,0,0,1,3.22-3.22H63.33a3.22,3.22,0,0,1,0,6.44H35.42A3.22,3.22,0,0,1,32.2,39.72Zm-15,15a3.22,3.22,0,0,1,3.22-3.22h2.14a3.22,3.22,0,1,1,0,6.44H20.4A3.22,3.22,0,0,1,17.18,54.75Zm15,0a3.22,3.22,0,0,1,3.22-3.22H63.33a3.22,3.22,0,0,1,0,6.44H35.42A3.23,3.23,0,0,1,32.2,54.75Zm-15,15a3.22,3.22,0,0,1,3.22-3.22h2.14a3.22,3.22,0,1,1,0,6.44H20.4A3.22,3.22,0,0,1,17.18,69.77Zm15,0a3.23,3.23,0,0,1,3.22-3.22H63.33a3.22,3.22,0,0,1,0,6.44H35.42A3.22,3.22,0,0,1,32.2,69.77Z"/></svg>
                         </span>
@@ -189,74 +197,210 @@
    </div>
 
            
- <!-- ================ Order Details List ================= -->
-            <div class="details">
-                <div class="recentOrders">
-                    <div class="cardHeader">
-                        <h2>Tecnicos</h2>
-                        <!-- Crear tecnico Button -->
-                        <div class="button-container">
-                        <button class="create-client-btn">Crear Tecnico</button>
-                        </div>
-                        <!-- Campo de búsqueda -->
-                        <input type="text" id="searchInput" placeholder="Buscar tecnico...">
-
-                    </div>
-            
-                    <table id="tablaTecnicos">
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Empresa</th>
-                                <th>Categoria</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Aquí se llenarán los datos de los tecnicos -->
-                        </tbody>
-                    </table>
-                </div>
+            <!-- ================ Order Details List ================= -->
+<section class="details">
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2>Ordenes de Trabajo</h2>
+            <div class="button-container">
+                <button class="create-Orden-btn">Crear Ordén</button>
             </div>
-          
-<!-- Popup para Crear Técnico -->
-<div id="createClientPopup" class="popup" style="display: none;">
+            <input type="text" id="searchInputorden" placeholder="Search orders...">
+        </div>
+
+        <table id="tablaOrdenes">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Equipo</th>
+                    <th>Tipo de Uso</th>
+                    <th>Objetivo</th>
+                    <th>Tipo de Trabajo</th>
+                    <th>Fecha Inicio</th>
+                    <th>Fecha Culminación</th>
+                    <th>Serial de Motor</th>
+                    <th>Serial de Carroseria</th>
+                    <th>Descripción General</th>
+                    <th>Observacion General</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+</section>
+        </main>
+    </div>
+   <!-- Formularios emergentes de creación de órdenes -->
+<div id="createOrdenPopupA" class="popup">
     <div class="popup-content">
-        <span id="closePopup" class="close">&times;</span>
-        <h2>Crear Técnico</h2>
-        <form id="createClientForm" action="createTechnician.php" method="POST">
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" required>
-
-            <label for="apellido">Apellido</label>
-            <input type="text" name="apellido" id="apellido" required>
-
-             <label for="empresa">Empresa:</label>
-        <select id="empresa" name="empresa" required>
-            <!-- Las empresas se cargarán dinámicamente aquí -->
-        </select>
-
-            <label for="categoria">Categoría</label>
-            <select name="categoria_id" id="categoria" required>
-                <option value="">Selecciona una categoría</option>
-                <option value="1">Junior</option>
-                <option value="2">Senior</option>
+        <h2>Descripción del Equipo</h2>
+        <form id="createOrdenFormA">
+            <label for="cliente">Cliente:</label>
+            <select id="cliente" name="cliente_id" required>
+                <option value="">Seleccionar Cliente</option>
+                <!-- Las opciones serán añadidas dinámicamente con JavaScript -->
             </select>
+            <label for="equipo">Equipo:</label>
+            <input type="text" id="equipo" name="equipo" required>
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" name="marca" required>
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" required>
+            <label for="serie">Serie:</label>
+            <input type="text" id="serie" name="serie" required>
+            <label for="nro_bien">Nro Bien:</label>
+            <input type="text" id="nro_bien" name="nro_bien" required>
+            <label for="ano">Año:</label>
+            <input type="text" id="ano" name="ano" required>
+            <label for="serial_motor">Serial Motor:</label>
+            <input type="text" id="serial_motor" name="serial_motor" required>
+            <label for="serial_carroceria">Serial Carroceria:</label>
+            <input type="text" id="serial_carroceria" name="serial_carroceria" required>
+            <label for="color">Color:</label>
+            <input type="text" id="color" name="color" required>
+            <label for="tipo_uso">Tipo de Uso:</label>
+            <input type="text" id="tipo_uso" name="tipo_uso" required>
+            <label for="ubicacion">Ubicación:</label>
+            <input type="text" id="ubicacion" name="ubicacion" required>
+            <button type="button" onclick="showNextPopup('createOrdenPopupA', 'createOrdenPopupB')">Siguiente</button>
+        </form>
+    </div>
+</div>
 
-            <!-- Campo oculto para admin_id -->
-            <input type="hidden" name="admin_id" id="admin_id">
+<!-- Sección B: Descripción General de la Orden de Trabajo -->
+<div id="createOrdenPopupB" class="popup">
+    <div class="popup-content">
+        <h2>Descripción General de la Orden de Trabajo</h2>
+        <form id="createOrdenFormB">
+            <label for="objetivo">Objetivo:</label>
+            <input type="text" id="objetivo" name="objetivo" required>
+            <label for="tipo_trabajo">Tipo de Trabajo:</label>
+            <input type="text" id="tipo_trabajo" name="tipo_trabajo" required>
+            <label for="fecha_inicio">Fecha inicio:</label>
+            <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+            <label for="fecha_culminacion">Fecha de Culminación:</label>
+            <input type="date" id="fecha_culminacion" name="fecha_culminacion" required>
+            <label for="duracion">Duración:</label>
+            <input type="text" id="duracion" name="duracion" required>
+            <label for="periodo">Periodo:</label>
+            <input type="text" id="periodo" name="periodo" required>
+            <button type="button" onclick="showNextPopup('createOrdenPopupB', 'createOrdenPopupC')">Siguiente</button>
+        </form>
+    </div>
+</div>
 
-            <button type="submit">Crear Técnico</button>
+<!-- Sección C: Identificación de Responsables -->
+<div id="createOrdenPopupC" class="popup">
+    <div class="popup-content">
+        <h2>Identificación de Responsables</h2>
+        <form id="createOrdenFormC">
+            <label for="solicita">Solicita:</label>
+            <input type="text" id="solicita" name="solicita" required>
+            <label for="autoriza">Autoriza:</label>
+            <input type="text" id="autoriza" name="autoriza" required>
+            <label for="ejecuta">Ejecuta:</label>
+            <input type="text" id="ejecuta" name="ejecuta" required>
+            <label for="supervisa">Supervisa:</label>
+            <input type="text" id="supervisa" name="supervisa" required>
+            <button type="button" onclick="showNextPopup('createOrdenPopupC', 'createOrdenPopupD')">Siguiente</button>
+        </form>
+    </div>
+</div>
+
+<!-- Sección D: Tareas a Ejecutar -->
+<div id="createOrdenPopupD" class="popup">
+    <div class="popup-content">
+        <h2>Tareas a Ejecutar</h2>
+        <form id="createOrdenFormD">
+            <label for="descripcion_tarea">Descripción de la Tarea:</label>
+            <input type="text" id="descripcion_tarea" name="descripcion_tarea" required>
+            <label for="tiempo_estimado">Tiempo Estimado:</label>
+            <input type="text" id="tiempo_estimado" name="tiempo_estimado" required>
+            <label for="tiempo_real">Tiempo Real:</label>
+            <input type="text" id="tiempo_real" name="tiempo_real" required>
+            <button type="button" onclick="showNextPopup('createOrdenPopupD', 'createOrdenPopupE')">Siguiente</button>
+        </form>
+    </div>
+</div>
+
+<!-- Sección E: Repuestos a Utilizar -->
+<div id="createOrdenPopupE" class="popup">
+    <div class="popup-content">
+        <h2>Repuestos a Utilizar</h2>
+        <form id="createOrdenFormE">
+            <label for="codigo_repuesto">Código:</label>
+            <input type="text" id="codigo_repuesto" name="codigo_repuesto" required>
+            <label for="descripcion_repuesto">Descripción:</label>
+            <input type="text" id="descripcion_repuesto" name="descripcion_repuesto" required>
+            <label for="cantidad_planificada">Cantidad Planificada:</label>
+            <input type="number" id="cantidad_planificada" name="cantidad_planificada" required>
+            <label for="cantidad_utilizada">Cantidad Utilizada:</label>
+            <input type="number" id="cantidad_utilizada" name="cantidad_utilizada" required>
+            <button type="button" onclick="showNextPopup('createOrdenPopupE', 'createOrdenPopupF')">Siguiente</button>
+        </form>
+    </div>
+</div>
+
+<!-- Sección F: Personal Requerido -->
+<div id="createOrdenPopupF" class="popup">
+    <div class="popup-content">
+        <h2>Personal Requerido</h2>
+        <form id="createOrdenFormF">
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" name="categoria" required>
+            <label for="nombre_personal">Nombre y Apellido:</label>
+            <input type="text" id="nombre_personal" name="nombre_personal" required>
+            <label for="horas_requeridas">Horas Requeridas:</label>
+            <input type="number" id="horas_requeridas" name="horas_requeridas" required>
+            <label for="horas_normales">Horas Normales:</label>
+            <input type="number" id="horas_normales" name="horas_normales" required>
+            <label for="horas_extras">Horas Extras:</label>
+            <input type="number" id="horas_extras" name="horas_extras" required>
+            <button type="button" onclick="showNextPopup('createOrdenPopupF', 'createOrdenPopupG')">Siguiente</button>
+        </form>
+    </div>
+</div>
+
+<!-- Sección G: Equipos de Protección Personal Requeridos -->
+<div id="createOrdenPopupG" class="popup">
+    <div class="popup-content">
+        <h2>Equipos de Protección Personal Requeridos</h2>
+        <form id="createOrdenFormG">
+            <label for="codigo_epp">Código:</label>
+            <input type="text" id="codigo_epp" name="codigo_epp" required>
+            <label for="descripcion_epp">Descripción:</label>
+            <input type="text" id="descripcion_epp" name="descripcion_epp" required>
+            <label for="cantidad_planificada_epp">Cantidad Planificada:</label>
+            <input type="number" id="cantidad_planificada_epp" name="cantidad_planificada_epp" required>
+            <label for="cantidad_utilizada_epp">Cantidad Utilizada:</label>
+            <input type="number" id="cantidad_utilizada_epp" name="cantidad_utilizada_epp" required>
+            <button type="button" onclick="showNextPopup('createOrdenPopupG', 'createOrdenPopupH')">Siguiente</button>
+        </form>
+    </div>
+</div>
+
+<!-- Sección H: Observaciones Generales -->
+<div id="createOrdenPopupH" class="popup">
+    <div class="popup-content">
+        <h2>Observaciones Generales</h2>
+        <form id="createOrdenFormH">
+            <label for="observacion_general">Observación:</label>
+            <textarea id="observacion_general" name="observacion_general" required></textarea>
+            <button type="button" onclick="submitFormData()">Enviar</button>
         </form>
     </div>
 </div>
 
 
-  
-
+       
     <!-- =========== Scripts =========  -->
-    <script src="assets/js/tecnicos.js"></script>
+    <script src='assets/js/orders.js'></script>
+    <script src='assets/js/ordenedit.js'></script>
     <script src='assets/js/index.js'></script>
+
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

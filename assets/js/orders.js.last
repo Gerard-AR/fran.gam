@@ -1,0 +1,205 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Obtener el elemento principal con el atributo data-admin-id
+    const mainContent = document.getElementById('main-content');
+
+    if (!mainContent) {
+        console.error("El elemento 'main-content' no se encontró en el DOM.");
+        return;
+    }
+
+    const adminId = mainContent.dataset.adminId;
+
+    if (!adminId) {
+        console.error("El atributo 'data-admin-id' no está definido.");
+        return;
+    }
+
+    console.log(`Admin ID encontrado: ${adminId}`);
+
+    // Función para cargar clientes dinámicamente
+    const loadClientes = () => {
+        fetch(`getClientes.php?admin_id=${adminId}`)
+            .then(response => response.json())
+            .then(data => {
+                const clienteSelect = document.getElementById('cliente');
+                if (clienteSelect) {
+                    clienteSelect.innerHTML = '<option value="">Seleccionar Cliente</option>';
+                    data.forEach(cliente => {
+                        const option = document.createElement('option');
+                        option.value = cliente.id;
+                        option.textContent = `${cliente.nombre} ${cliente.apellido} - ${cliente.empresa || 'Sin empresa'}`;
+                        clienteSelect.appendChild(option);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error("Error al cargar clientes:", error);
+            });
+    };
+
+    // Llamar a la función para cargar clientes
+    loadClientes();
+
+    // Función para cargar máquinas asociadas a un cliente
+    const loadMachines = (clienteId) => {
+        const maquinaSelect = document.getElementById('maquina');
+        if (!clienteId) {
+            maquinaSelect.innerHTML = '<option value="">Seleccionar Máquina</option>';
+            return;
+        }
+
+        fetch(`getEquipos.php?cliente_id=${clienteId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    maquinaSelect.innerHTML = '<option value="">Seleccionar Máquina</option>';
+                    data.machines.forEach(machine => {
+                        const option = document.createElement('option');
+                        option.value = machine.id;
+                        option.textContent = `${machine.equipo} - ${machine.referencia} (${machine.modelo})`;
+                        maquinaSelect.appendChild(option);
+                    });
+                } else {
+                    console.error("Error al cargar máquinas:", data.message);
+                }
+            })
+            .catch(error => console.error("Error en la solicitud de máquinas:", error));
+    };
+
+    // Evento para cargar máquinas al cambiar el cliente
+    const clienteSelect = document.getElementById('cliente');
+    clienteSelect.addEventListener('change', () => {
+        const clienteId = clienteSelect.value;
+        loadMachines(clienteId);
+    });
+
+    // Activar el efecto hover en el menú según la página actual
+    const activarMenuHover = () => {
+        const currentPage = window.location.pathname.split('/').pop();
+        const menuItems = document.querySelectorAll('.navigation ul li a');
+        menuItems.forEach(item => item.parentElement.classList.remove('hovered'));
+        menuItems.forEach(item => {
+            const pageName = item.getAttribute('href').split('/').pop();
+            if (pageName === currentPage) {
+                item.parentElement.classList.add('hovered');
+            }
+        });
+    };
+
+    activarMenuHover();
+
+    // Manejo del botón para abrir el popup de creación de órdenes
+    const createOrdenBtn = document.querySelector('.create-Orden-btn');
+    if (createOrdenBtn) {
+        createOrdenBtn.addEventListener('click', () => {
+            document.getElementById('createOrdenPopupA').style.display = 'flex';
+        });
+    }
+
+    const createOrdenPopups = [
+        'createOrdenPopupA',
+        'createOrdenPopupB',
+        'createOrdenPopupC',
+        'createOrdenPopupD',
+        'createOrdenPopupE',
+        'createOrdenPopupF',
+        'createOrdenPopupG',
+        'createOrdenPopupH'
+    ];
+
+    let formData = new FormData();
+
+    // Función para mostrar el siguiente popup
+    window.showNextPopup = (currentPopupId, nextPopupId) => {
+        document.getElementById(currentPopupId).style.display = 'none';
+        document.getElementById(nextPopupId).style.display = 'flex';
+    };
+
+    // Manejo de envío de formularios en los popups
+    const handleFormSubmit = (event, form, nextPopupId) => {
+        event.preventDefault();
+        const formPartData = new FormData(form);
+        formPartData.forEach((value, key) => formData.append(key, value));
+        if (nextPopupId) {
+            showNextPopup(form.parentElement.parentElement.id, nextPopupId);
+        } else {
+            submitFormData();
+        }
+    };
+
+    createOrdenPopups.forEach((popupId, index) => {
+        const form = document.getElementById(`createOrdenForm${String.fromCharCode(65 + index)}`);
+        if (form) {
+            form.addEventListener('submit', (event) => handleFormSubmit(event, form, createOrdenPopups[index + 1]));
+        }
+    });
+
+    // Función para enviar los datos del formulario completo
+    window.submitFormData = () => {
+        fetch('createOrden.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Orden de trabajo creada exitosamente');
+                fetchOrdenes();
+            } else {
+                alert('Error al crear la orden de trabajo: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    };
+
+    // Función para cargar órdenes existentes
+    const fetchOrdenes = () => {
+        fetch('getOrdenes.php')
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.querySelector('#tablaOrdenes tbody');
+                if (tbody) {
+                    tbody.innerHTML = ''; // Limpiar contenido previo
+                    data.forEach(orden => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${orden.cliente_id}</td>
+                            <td>${orden.equipo}</td>
+                            <td>${orden.marca}</td>
+                            <td>${orden.modelo}</td>
+                            <td>${orden.serie}</td>
+                            <td>${orden.nro_bien}</td>
+                            <td>${orden.ano}</td>
+                            <td>${orden.serial_motor}</td>
+                            <td>
+                                <button onclick="eliminarOrden(${orden.id})">Eliminar</button>
+                                <button onclick="verDetallesOrden(${orden.id})">Detalles</button>
+                            </td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+                }
+            })
+            .catch(error => console.error('Error fetching orders:', error));
+    };
+
+    // Llamar a fetchOrdenes al cargar la página
+    fetchOrdenes();
+
+    // Manejar búsqueda de órdenes
+    const searchInputorden = document.getElementById('searchInputorden');
+    if (searchInputorden) {
+        searchInputorden.addEventListener('input', () => {
+            const searchValue = searchInputorden.value.toLowerCase();
+            const rows = document.querySelectorAll('#tablaOrdenes tbody tr');
+            rows.forEach(row => {
+                const cells = Array.from(row.children);
+                const match = cells.some(cell => cell.textContent.toLowerCase().includes(searchValue));
+                row.style.display = match ? '' : 'none';
+            });
+        });
+    }
+});
+

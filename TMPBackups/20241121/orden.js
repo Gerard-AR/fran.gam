@@ -102,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('getOrdenes.php')
             .then(response => response.json())
             .then(data => {
-		    console.log("Datos recibidos del servidor:", data);
                 const tbody = document.querySelector('#tablaOrdenes tbody');
                 tbody.innerHTML = ''; // Limpiar contenido previo
                 data.forEach(orden => {

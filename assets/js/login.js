@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 alert('Login exitoso');
                 // Redireccionar a la página principal
-                window.location.href = 'inicio.html';
+                window.location.href = 'inicio.php';
             } else {
                 alert('Error en el login: ' + data.message);
             }

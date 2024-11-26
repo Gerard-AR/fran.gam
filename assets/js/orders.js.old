@@ -1,0 +1,164 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const adminId = document.getElementById('main-content').dataset.adminId;
+    const clienteSelect = document.getElementById('cliente');
+    const createOrdenPopups = [
+        'createOrdenPopupA',
+        'createOrdenPopupB',
+        'createOrdenPopupC',
+        'createOrdenPopupD',
+        'createOrdenPopupE',
+        'createOrdenPopupF',
+        'createOrdenPopupG',
+        'createOrdenPopupH'
+    ];
+    let formData = new FormData();
+
+    // Función para cargar clientes dinámicamente
+    const loadClientes = (adminId) => {
+        if (!adminId) {
+            console.error("El admin_id no está disponible.");
+            return;
+        }
+
+        fetch(`getClientes.php?admin_id=${adminId}`)
+            .then(response => response.json())
+            .then(data => {
+                clienteSelect.innerHTML = '<option value="">Seleccionar Cliente</option>';
+                data.forEach(cliente => {
+                    const option = document.createElement('option');
+                    option.value = cliente.id;
+                    option.textContent = `${cliente.nombre} ${cliente.apellido} - ${cliente.empresa || 'Sin empresa'}`;
+                    clienteSelect.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error("Error al cargar clientes:", error);
+                clienteSelect.innerHTML = '<option value="">Error al cargar clientes</option>';
+            });
+    };
+
+    // Llamar a loadClientes al cargar la página
+    loadClientes(adminId);
+
+    // Mostrar el primer popup al hacer clic en el botón
+    const createOrdenBtn = document.querySelector('.create-Orden-btn');
+    if (createOrdenBtn) {
+        createOrdenBtn.addEventListener('click', () => {
+            document.getElementById('createOrdenPopupA').style.display = 'flex';
+        });
+    } else {
+        console.error("El botón para crear órdenes no existe en el DOM.");
+    }
+
+    // Cerrar popups al hacer clic fuera de ellos
+    window.addEventListener('click', (event) => {
+        createOrdenPopups.forEach(popupId => {
+            const popup = document.getElementById(popupId);
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    });
+
+    // Función para mostrar el siguiente popup
+    window.showNextPopup = (currentPopupId, nextPopupId) => {
+        document.getElementById(currentPopupId).style.display = 'none';
+        document.getElementById(nextPopupId).style.display = 'flex';
+    };
+
+    // Manejo de envío de formularios
+    const handleFormSubmit = (event, form, nextPopupId) => {
+        event.preventDefault();
+        let formPartData = new FormData(form);
+        formPartData.forEach((value, key) => formData.append(key, value));
+
+        // Validar cliente seleccionado antes de continuar
+        if (form.id === 'createOrdenFormA' && !clienteSelect.value) {
+            alert("Por favor selecciona un cliente.");
+            return;
+        }
+
+        if (nextPopupId) {
+            showNextPopup(form.parentElement.parentElement.id, nextPopupId);
+        } else {
+            submitFormData();
+        }
+    };
+
+    createOrdenPopups.forEach((popupId, index) => {
+        const form = document.getElementById(`createOrdenForm${String.fromCharCode(65 + index)}`);
+        if (form) {
+            form.addEventListener('submit', (event) => handleFormSubmit(event, form, createOrdenPopups[index + 1]));
+        }
+    });
+
+    // Función para enviar el formulario completo
+    window.submitFormData = () => {
+        fetch('createOrden.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Orden de trabajo creada exitosamente');
+                fetchOrdenes();
+            } else {
+                alert('Error al crear la orden de trabajo: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error al crear la orden de trabajo');
+        });
+    };
+
+    // Función para obtener órdenes existentes
+    const fetchOrdenes = () => {
+        fetch('getOrdenes.php')
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.querySelector('#tablaOrdenes tbody');
+                tbody.innerHTML = ''; // Limpiar contenido previo
+                data.forEach(orden => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${orden.cliente_id}</td>
+                        <td>${orden.equipo}</td>
+                        <td>${orden.marca}</td>
+                        <td>${orden.modelo}</td>
+                        <td>${orden.serie}</td>
+                        <td>${orden.nro_bien}</td>
+                        <td>${orden.ano}</td>
+                        <td>${orden.serial_motor}</td>
+                        <td>
+                            <button onclick="eliminarOrden(${orden.id})">Eliminar</button>
+                            <button onclick="verDetallesOrden(${orden.id})">Detalles</button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching orders:', error));
+    };
+
+    // Filtrar órdenes por búsqueda
+    const filtrarOrdenes = () => {
+        const searchInput = document.getElementById('searchInputorden').value.toLowerCase();
+        const rows = document.querySelectorAll('#tablaOrdenes tbody tr');
+        rows.forEach(row => {
+            const cells = Array.from(row.children);
+            const match = cells.some(cell => cell.textContent.toLowerCase().includes(searchInput));
+            row.style.display = match ? '' : 'none';
+        });
+    };
+
+    const searchInputorden = document.getElementById('searchInputorden');
+    if (searchInputorden) {
+        searchInputorden.addEventListener('input', filtrarOrdenes);
+    }
+
+    // Cargar órdenes existentes al iniciar
+    fetchOrdenes();
+});
+

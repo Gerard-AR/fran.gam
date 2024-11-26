@@ -49,7 +49,7 @@ if ($result && $row = $result->fetch_assoc()) {
 }
 
 // Órdenes de trabajo
-$result = $conn->query("SELECT COUNT(*) AS total FROM ordenes_trabajo WHERE admin_id = $admin_id");
+$result = $conn->query("SELECT COUNT(*) AS total FROM workorders WHERE admin_id = $admin_id");
 if ($result && $row = $result->fetch_assoc()) {
     $data['ordenes'] = $row['total'];
 }

@@ -1,53 +1,39 @@
 <?php
-$servername = "localhost";
-$username = "admin_gamba";
-$password = "User$$123456";
-$dbname = "gamba_db";
-
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
-
-// Establecer encabezado para JSON
 header('Content-Type: application/json');
 
-// Obtener el admin_id desde la consulta
-$admin_id = isset($_GET['admin_id']) ? intval($_GET['admin_id']) : 0;
+try {
+    $servername = "localhost";
+    $username = "admin_gamba";
+    $password = "User$$123456";
+    $dbname = "gamba_db";
 
-// Validar si admin_id está presente
-if ($admin_id === 0) {
-    echo json_encode(["error" => "admin_id es requerido"]);
-    $conn->close();
-    exit();
-}
-
-// Consultar la tabla de órdenes filtrando por admin_id
-$sql = "SELECT id, cliente_id, equipo, marca, modelo, serie, nro_bien, ano, serial_motor
-        FROM ordenes_trabajo 
-        WHERE admin_id = ?"; // Filtrar por admin_id
-
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $admin_id);
-$stmt->execute();
-$result = $stmt->get_result();
-
-$ordenes = array();
-
-if ($result->num_rows > 0) {
-    // Salida de datos de cada fila
-    while ($row = $result->fetch_assoc()) {
-        $ordenes[] = $row;
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        echo json_encode(['success' => false, 'message' => 'Conexión fallida: ' . $conn->connect_error]);
+        exit();
     }
+
+    $query = "SELECT wo.id, wo.cliente_id, wo.maquina_id, c.nombre AS cliente_nombre, 
+                     m.equipo, m.referencia, wo.tipo_uso, wo.objetivo, wo.tipo_trabajo, 
+                     wo.fecha_inicio, wo.fecha_culminacion, wo.serial_motor, wo.serial_carroceria, 
+                     wo.descripcion_general, wo.observacion_general
+              FROM workorders wo
+              LEFT JOIN clientes c ON wo.cliente_id = c.id
+              LEFT JOIN machines m ON wo.maquina_id = m.id";
+
+    $result = $conn->query($query);
+    $workOrders = [];
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $workOrders[] = $row;
+        }
+    }
+
+    echo json_encode($workOrders);
+    $conn->close();
+} catch (Exception $e) {
+    echo json_encode(['success' => false, 'message' => $e->getMessage()]);
 }
-
-// Cerrar la conexión
-$stmt->close();
-$conn->close();
-
-// Devolver las órdenes en formato JSON
-echo json_encode($ordenes);
 ?>
+
