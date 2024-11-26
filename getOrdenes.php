@@ -13,10 +13,10 @@ try {
         exit();
     }
 
-    $query = "SELECT wo.id, wo.cliente_id, wo.maquina_id, c.nombre AS cliente_nombre, 
-                     m.equipo, m.referencia, wo.tipo_uso, wo.objetivo, wo.tipo_trabajo, 
-                     wo.fecha_inicio, wo.fecha_culminacion, wo.serial_motor, wo.serial_carroceria, 
-                     wo.descripcion_general, wo.observacion_general
+     $query = "SELECT wo.id, wo.cliente_id, wo.maquina_id, c.nombre AS cliente_nombre,
+                     m.equipo, m.referencia, wo.objetivo, wo.tipo_trabajo,
+                     wo.fecha_inicio, wo.fecha_culminacion, m.serial_motor, m.serial_carroceria,
+                     wo.descripcion_tarea, wo.observacion_general
               FROM workorders wo
               LEFT JOIN clientes c ON wo.cliente_id = c.id
               LEFT JOIN machines m ON wo.maquina_id = m.id";

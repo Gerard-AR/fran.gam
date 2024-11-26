@@ -109,13 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     const row = document.createElement('tr');
                     row.innerHTML = `
                         <td>${orden.cliente_id}</td>
-                        <td>${orden.equipo}</td>
-                        <td>${orden.marca}</td>
-                        <td>${orden.modelo}</td>
-                        <td>${orden.serie}</td>
-                        <td>${orden.nro_bien}</td>
-                        <td>${orden.ano}</td>
-                        <td>${orden.serial_motor}</td>
+                        <td>${orden.maquina_id}</td>
+                        <td>${orden.objetivo}</td>
+                        <td>${orden.tipo_trabajo}</td>
+                        <td>${orden.fecha_inicio}</td>
+                        <td>${orden.fecha_culminacion}</td>
+                        <td>${orden.descripcion_tarea}</td>
+                        <td>${orden.observacion_general}</td>
                         <td>
                             <button onclick="eliminarOrden(${orden.id})">Eliminar</button>
                             <button onclick="verDetallesOrden(${orden.id})">Detalles</button>

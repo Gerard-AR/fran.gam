@@ -195,15 +195,16 @@ if (!isset($_SESSION['admin_id'])) {
        </div>
      </a>
    </div>           
-    <!-- ================ Order Details List ================= -->
-            <div class="details">
-                <div class="recentOrders">
-                    <div class="cardHeader">
-                        <h2>Odenes de Trabajo</h2>
-                        <a href="Ordenes.html" class="btn">Ver todas</a>
-                    </div>
 
-                    <table id="tablaOrdenes">
+<!-- ================ Order Details List ================= -->
+<div class="details">
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2>Órdenes de Trabajo</h2>
+            <a href="Ordenes.html" class="btn">Ver todas</a>
+        </div>
+
+        <table id="tablaOrdenesTrabajo">
             <thead>
                 <tr>
                     <th>Cliente</th>
@@ -214,12 +215,11 @@ if (!isset($_SESSION['admin_id'])) {
                 </tr>
             </thead>
             <tbody>
-                
+                <!-- Los datos se llenarán aquí con JavaScript -->
             </tbody>
         </table>
-       
-                </div>
 
+    </div>
                 <!-- ================= New Customers ================ -->
                 <div class="recentCustomers">
                     <div class="cardHeader">
@@ -239,6 +239,7 @@ if (!isset($_SESSION['admin_id'])) {
 
     <!-- =========== Scripts =========  -->
     <script src='assets/js/index.js'></script>
+    <script src="assets/js/ordenes.js"></script>
 
 
 

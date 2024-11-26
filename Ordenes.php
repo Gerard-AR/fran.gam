@@ -213,7 +213,6 @@ if (!isset($_SESSION['admin_id'])) {
                 <tr>
                     <th>Cliente</th>
                     <th>Equipo</th>
-                    <th>Tipo de Uso</th>
                     <th>Objetivo</th>
                     <th>Tipo de Trabajo</th>
                     <th>Fecha Inicio</th>
